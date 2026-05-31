@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FileShare - Главная</title>
+    <title>FileShare - Пользователь</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="nav-brand">FileShare</div>
         <div class="nav-links">
-            <a href="index.html" class="active">Главная</a>
+            <a href="index.html">Главная</a>
             <a href="files.html">Файлы</a>
             <a href="about.html">О нас</a>
             <a href="download.html">Скачать</a>
@@ -34,22 +34,35 @@
 
     <!-- Основной контент -->
     <main class="main-content">
-        <div class="upload-section">
-            <div class="warning-message" id="warningMessage">
-                Максимальный размер файла: 100 МБ
+        <div class="profile-section">
+            <div class="profile-header">
+                <img src="" alt="Avatar" class="profile-avatar">
+                <h2>Maria_Smirnova</h2>
             </div>
             
-            <div class="upload-area" id="uploadArea">
-                <div class="upload-icon">📁</div>
-                <p class="upload-text">Перетащите файл сюда</p>
-                <p class="upload-subtext">или</p>
-                <button class="upload-btn" id="uploadBtn">Выбрать файл</button>
-                <input type="file" id="fileInput" style="display: none;">
+            <div class="profile-info">
+                <div class="info-field">
+                    <label>Логин:</label>
+                    <span>Maria_Smirnova</span>
+                </div>
+                
+                <div class="info-field">
+                    <label>ID:</label>
+                    <span>67890</span>
+                </div>
+                
+                <div class="info-field">
+                    <label>Местоположение:</label>
+                    <span>Санкт-Петербург, Россия</span>
+                </div>
+                
+                <div class="info-field">
+                    <label>Статус:</label>
+                    <span class="online-status">В сети</span>
+                </div>
             </div>
-
-            <div class="register-reminder">
-                <p>💡 Зарегистрируйтесь, чтобы получить доступ к дополнительным функциям</p>
-            </div>
+            
+            <button class="save-user-btn">Сохранить</button>
         </div>
     </main>
 

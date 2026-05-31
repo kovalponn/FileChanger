@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileShare - Файлы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Общая панель навигации -->
+    <nav class="navbar">
+        <div class="nav-brand">FileShare</div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="files.html" class="active">Файлы</a>
+            <a href="about.html">О нас</a>
+            <a href="download.html">Скачать</a>
+            <a href="saved-users.html">Пользователи</a>
+            <a href="profile.html">Профиль</a>
+        </div>
+        <div class="nav-actions">
+            <button class="notification-btn" id="notificationBtn" title="Уведомления">
+                🔔
+                <span class="notification-badge">3</span>
+            </button>
+            <a href="profile.html" class="avatar-link">
+                <img src="" alt="User" class="avatar" id="userAvatar">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Контейнер для уведомлений -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="files-layout">
+            <!-- Левая часть: файлы и кнопка запрета -->
+            <div class="files-section">
+                <button class="ban-upload-btn">Запретить загрузку всем</button>
+                
+                <div class="files-list">
+                    <!-- Примеры файлов -->
+                    <div class="file-item">
+                        <div class="file-icon">📄</div>
+                        <div class="file-info">
+                            <div class="file-name">document.pdf</div>
+                            <div class="file-size">2.4 МБ</div>
+                        </div>
+                    </div>
+                    
+                    <div class="file-item">
+                        <div class="file-icon">🖼️</div>
+                        <div class="file-info">
+                            <div class="file-name">image.png</div>
+                            <div class="file-size">5.1 МБ</div>
+                        </div>
+                    </div>
+                    
+                    <div class="file-item">
+                        <div class="file-icon">📊</div>
+                        <div class="file-info">
+                            <div class="file-name">presentation.pptx</div>
+                            <div class="file-size">15.8 МБ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Чат -->
+                <div class="chat-section">
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Шаблон системного сообщения -->
+                        <div class="message system-message">
+                            <span class="message-system">Система:</span>
+                            <span class="message-text">Файл загружен пользователем Ivan</span>
+                        </div>
+                        
+                        <!-- Шаблон моего сообщения -->
+                        <div class="message my-message">
+                            <span class="message-author">Я:</span>
+                            <span class="message-text">Привет всем! Я загрузил новый файл</span>
+                        </div>
+                        
+                        <!-- Шаблон сообщения от другого пользователя -->
+                        <div class="message other-message">
+                            <span class="message-author">Maria:</span>
+                            <span class="message-text">Отлично, спасибо!</span>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" placeholder="Введите сообщение..." id="chatInput">
+                        <button class="send-btn">Отправить</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая часть: список пользователей -->
+            <div class="users-section">
+                <div class="users-toggle">
+                    <button class="toggle-btn active">Все</button>
+                    <button class="toggle-btn">По отдельности</button>
+                </div>
+                
+                <div class="users-list" id="usersList">
+                    <!-- Если список пуст -->
+                    <div class="empty-users" id="emptyUsers" style="display: none;">
+                        <button class="add-user-btn" id="addUserBtn">+</button>
+                        <p>Добавить пользователя</p>
+                        <div class="add-user-input" id="addUserInput" style="display: none;">
+                            <input type="text" placeholder="Введите логин">
+                            <button class="confirm-add-btn">✓</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаблон пользователя -->
+                    <div class="user-item" id="userTemplate">
+                        <img src="" alt="Avatar" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-login">Ivan_Petrov</div>
+                            <div class="user-status online">В сети</div>
+                        </div>
+                        <div class="user-actions" style="display: none;">
+                            <button class="user-action-btn ban-user-btn">Запретить</button>
+                            <button class="user-action-btn profile-btn">В профиль</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Еще один шаблон пользователя -->
+                    <div class="user-item">
+                        <img src="" alt="Avatar" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-login">Maria_Smirnova</div>
+                            <div class="user-status offline">Не в сети</div>
+                        </div>
+                        <div class="user-actions" style="display: none;">
+                            <button class="user-action-btn ban-user-btn">Запретить</button>
+                            <button class="user-action-btn profile-btn">В профиль</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

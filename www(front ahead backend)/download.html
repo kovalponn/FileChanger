@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileShare - Скачать</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Общая панель навигации -->
+    <nav class="navbar">
+        <div class="nav-brand">FileShare</div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="files.html">Файлы</a>
+            <a href="about.html">О нас</a>
+            <a href="download.html" class="active">Скачать</a>
+            <a href="saved-users.html">Пользователи</a>
+            <a href="profile.html">Профиль</a>
+        </div>
+        <div class="nav-actions">
+            <button class="notification-btn" id="notificationBtn" title="Уведомления">
+                🔔
+                <span class="notification-badge">3</span>
+            </button>
+            <a href="profile.html" class="avatar-link">
+                <img src="" alt="User" class="avatar" id="userAvatar">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Контейнер для уведомлений -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="download-layout">
+            <!-- Секция скачивания -->
+            <div class="download-section">
+                <button class="download-btn">Скачать файл</button>
+            </div>
+
+            <!-- Чат (такой же как на странице файлов) -->
+            <div class="chat-section">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Шаблон системного сообщения -->
+                    <div class="message system-message">
+                        <span class="message-system">Система:</span>
+                        <span class="message-text">Файл готов к скачиванию</span>
+                    </div>
+                    
+                    <!-- Шаблон моего сообщения -->
+                    <div class="message my-message">
+                        <span class="message-author">Я:</span>
+                        <span class="message-text">Скачиваю файл</span>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <input type="text" placeholder="Введите сообщение..." id="chatInput">
+                    <button class="send-btn">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

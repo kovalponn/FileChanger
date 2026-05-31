@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileShare - Сохраненные пользователи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Общая панель навигации -->
+    <nav class="navbar">
+        <div class="nav-brand">FileShare</div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="files.html">Файлы</a>
+            <a href="about.html">О нас</a>
+            <a href="download.html">Скачать</a>
+            <a href="saved-users.html" class="active">Пользователи</a>
+            <a href="profile.html">Профиль</a>
+        </div>
+        <div class="nav-actions">
+            <button class="notification-btn" id="notificationBtn" title="Уведомления">
+                🔔
+                <span class="notification-badge">3</span>
+            </button>
+            <a href="profile.html" class="avatar-link">
+                <img src="" alt="User" class="avatar" id="userAvatar">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Контейнер для уведомлений -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="saved-users-section">
+            <h2>Сохраненные пользователи</h2>
+            
+            <div class="saved-users-list">
+                <!-- Шаблон пользователя в списке -->
+                <a href="user.html" class="saved-user-item">
+                    <img src="" alt="Avatar" class="saved-user-avatar">
+                    <span class="saved-user-login">Maria_Smirnova</span>
+                </a>
+                
+                <a href="user.html" class="saved-user-item">
+                    <img src="" alt="Avatar" class="saved-user-avatar">
+                    <span class="saved-user-login">Alex_Kozlov</span>
+                </a>
+                
+                <a href="user.html" class="saved-user-item">
+                    <img src="" alt="Avatar" class="saved-user-avatar">
+                    <span class="saved-user-login">Elena_Ivanova</span>
+                </a>
+                
+                <a href="user.html" class="saved-user-item">
+                    <img src="" alt="Avatar" class="saved-user-avatar">
+                    <span class="saved-user-login">Dmitry_Popov</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
